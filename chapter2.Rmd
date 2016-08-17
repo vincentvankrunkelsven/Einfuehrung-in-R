@@ -227,7 +227,7 @@ test_object("roulette_vector",
             eq_condition = "equal",
             incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Vektornamen für `roulette_vector` zugewiesen haben. Nutzen Sie exakt den gleichen Vektor, wie für `poker_vector`.")
 success_msg("Gut gemacht! Gehen Sie zur nächsten Übung.")
-
+```
 
 --- type:NormalExercise xp:100 skills:1 key:6858c65a4a
 ## Benennen eines Vektors (2)
