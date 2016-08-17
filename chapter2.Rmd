@@ -6,7 +6,7 @@ description : "In diesem kostenlosen R Kurs machen wir eine Reise nach Las Vegas
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
 ## Erstellen eines Vektors
 
-Sind Sie glücklich? Weil dieses Kapitel Sie mit auf eine Reise in die Stadt der Sünden nimmt, auch bekannt als *Statisticians Paradise*!
+Sind Sie ein Glückspilz? Weil dieses Kapitel Sie mit auf eine Reise in die Stadt der Sünden nimmt, auch bekannt als *Statisticians Paradise*!
 
 Dank R und ihre neuen datenanalytischen Fähigkeiten werden Sie lernen, wie Sie Ihre Leistung an den Tischen und Ihre Karriere als Profi-Spieler verbessern. Dieses Kapitel zeigt Ihnen, wie Sie ganz leicht den Überblick über Ihre Wettfortschritte erhalten und wie Sie einige einfache Analysen vorheriger Handlungen machen können. Nächster Halt: Vegas Baby... VEGAS!!
 
@@ -50,14 +50,14 @@ Fokussieren wir uns zuerst!
 
 Auf Ihrem Weg vom Tellerwäscher zum Millionär finden Sie eine umfangreiche Verwendung von Vektoren. Vektoren sind eindimensionale Arrays, die numerische Daten, Zeichendaten oder logische Daten sein können. Mit anderen Worten ist ein Vektor ein einfaches Werkzeug, um Daten zu speichern. Zum Beispiel können Sie Ihre täglichen Gewinne und Verluste in den Spielkasinos speichern.
 
-In R schaffen Sie einen Vektor in Kombination mit der Funktion [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Die Vektorelemente werden in der runden Klammer mit einem Komma getrennt. Zum Beispiel:
+In R erstellen Sie einen Vektor in mit der combine Funktion [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Die Vektorelemente werden in der runden Klammer mit einem Komma getrennt. Zum Beispiel:
 
 ```
 numeric_vector <- c(1, 2, 3)
 character_vector <- c("a", "b", "c")
 ```
 
-Sobald Sie diese Vektoren in R geschaffen haben, können Sie diese nutzen, um Berechnungen zu machen.
+Sobald Sie diese Vektoren in R erstellt haben, können Sie diese nutzen, um Berechnungen zu machen.
 
 *** =instructions 
 Vervollständigen Sie den Code, so dass `boolean_vector` die drei Elemente: `TRUE`, `FALSE` and `TRUE` (in dieser Reihenfolge) enthält. 
@@ -95,7 +95,7 @@ test_object("numeric_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("character_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("boolean_vector",
             incorrect_msg = "Vergewissern Sie sich, dass Sie `boolean_vector` die richtigen Werte zugewiesen haben. Verwenden Sie `c(TRUE, FALSE, TRUE)`. Fügen Sie keine Anführungszeichen um `TRUE` und `FALSE`! Also stellen Sie sicher, dass Sie diesselbe Reihenfolge, wie in der Beschreibung, verwendet haben.")
-success_msg("Perfekt! Beachten Sie, dass ein Leerzeichen hinter dem Komma in der Funktion `c()` die Lesbarkeit Ihres Codes verbessert! Lassen Sie uns mehr Vektoren in der nächsten Übung kreieren.")
+success_msg("Perfekt! Beachten Sie, dass ein Leerzeichen hinter dem Komma in der Funktion `c()` die Lesbarkeit Ihres Codes verbessert! Lassen Sie uns mehr Vektoren in der nächsten Übung erstellen.")
 ```
 
 
