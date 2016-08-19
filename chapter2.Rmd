@@ -211,7 +211,7 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 names(poker_vector) <- c("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag")
 
 # Weisen Sie die Tage dem roulette_vectors zu
-names(roulette_vector) <- cc("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag")
+names(roulette_vector) <- c("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag")
 ```
 
 *** =sct
