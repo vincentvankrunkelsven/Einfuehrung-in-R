@@ -5,18 +5,18 @@ description : "In diesem Kapitel werden Sie Ihre ersten Schritte mit R machen. S
 
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
 ## Wie R funktioniert
-Auf der rechten Seite geben Sie im Editor den R Code ein, um die Übung zu lösen. Wenn Sie auf den Button "Antwort abschicken" klicken, wird jede Codezeile interpretiert und durch R ausgeführt und Sie erhalten eine Nachricht, ob Ihr Code richtig war. Ihre Ausgabe des R-Codes wird in der Konsole unten rechts in der Ecke des Bildschirmes angezeigt.
+Auf der rechten Seite geben Sie im Editor den R Code ein, um die Übung zu lösen. Wenn Sie auf den Button "Antwort abschicken" klicken, wird jede Codezeile interpretiert und durch R ausgeführt und Sie erhalten eine Nachricht, ob der von Ihnen erstellte Code richtig war. Ihre Ausgabe des R-Codes wird in der Konsole unten rechts angezeigt.
 
-R verwendet für die Kommentare die #-Taste, sodass Sie und andere Nutzer wissen, was der R Code bedeutet. Wie bei Twitter! Kommentare werden nicht als R Code ausgeführt, somit beeinflussen sie die Ergebnisse nicht. Zum Beispiel _Berechnen Sie 3+4_ ist im Editor rechts ein Kommentar.
+In R wird die #-Taste genutzt um Kommentare zu kennzeichnen, die Ihnen und anderen R-Nutzern zusätzliche Informationen über den Code bereitstellen. Kommentare werden nicht als R-Code ausgeführt, somit beeinflussen sie die Ergebnisse nicht. Zum Beispiel _Berechnen Sie 3+4_ ist im Editor rechts ein Kommentar.
 
-Sie können die R Befehle auch direkt in der Konsole ausführen. Dies ist ein guter Weg, um mit den R Codes zu experimentieren, da Ihre Eingabe nicht auf die Richtigkeit überprüft wird.
+Sie können die R-Befehle auch direkt in der Konsole ausführen. Dies ist ein guter Weg, um mit R-Code zu experimentieren, da Ihre Eingabe nicht auf Richtigkeit überprüft wird.
 
 *** =instructions
 - Im Editor auf der rechten Seite gibt es bereits einige Beispiel-Codes. Erkennen Sie, welche Linien tatsächlich die R Codes und welche Linien die Kommentare sind? 
 - Fügen Sie eine Codezeile hinzu, die die Summe von 6 und 12 berechnet und klicken Sie auf den Button "Antwort abschicken".
 
 *** =hint
-Fügen Sie einfach eine Linie von R Code ein, der die Summe von 6 und 12 berechnet, genau wie das Beispiel in dem Beispielcode.
+Fügen Sie eine Zeile R-Code ein, die die Summe von 6 und 12 berechnet, genau wie im Beispielcode demonstriert.
 
 *** =pre_exercise_code
 ```{r}
@@ -43,8 +43,8 @@ Fügen Sie einfach eine Linie von R Code ein, der die Summe von 6 und 12 berechn
 
 *** =sct
 ```{r}
-test_output_contains("18", incorrect_msg = "Stellen Sie sicher, dass Sie '6 + 12' in einer neuen Zeile hinzugefügt haben. Starten Sie die Linie nicht mit einer '#'-Taste, ansonsten wird Ihr Code nicht ausgeführt!")
-success_msg("Ausgezeichnet! Sehen Sie, wie die Konsole das Ergebnis des R Codes zeigt. Nun, da Sie mit der Schnittstelle vertraut sind, wollen wir uns an die Arbeit mit R machen!")
+test_output_contains("18", incorrect_msg = "Stellen Sie sicher, dass Sie '6 + 12' in einer neuen Zeile eingefügt haben. Starten Sie die Zeile nicht mit einem '#'-Zeichen, ansonsten wird Ihr Code nicht ausgeführt!")
+success_msg("Ausgezeichnet! Sehen Sie, wie die Konsole das Ergebnis des R-Codes zeigt? Nun, da Sie mit den Grundzügen vertraut sind, wollen wir uns an die Arbeit mit R machen!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
@@ -68,8 +68,8 @@ Mit diesem Wissen folgen Sie den nachstehenden Anweisungen, um die Übung abzusc
 *** =instructions
 - Tippen Sie `2^5` in den Editor, um 2 hoch 5 zu berechnen.
 - Tippen Sie `28 %% 6` um 28 Modulo 6 zu berechnen.
-- Klicken Sie auf 'Antwort abschicken' und schauen Sie sich die R Ausgabe in der Konsole an.
-- Beachten Sie, wie das '#' Symbol in den R Codes verwendet wird. 
+- Klicken Sie auf 'Antwort abschicken' und schauen Sie sich die R-Ausgabe in der Konsole an.
+- Beachten Sie, wie das '#' Symbol in den R-Codes verwendet wird. 
 
 *** =hint
 Ein weiteres Beispiel für den Modulo Operator: `9 %% 2` gleich `1`.
@@ -135,7 +135,7 @@ success_msg("Toll! Gehen Sie zur nächsten Übung.")
 
 Ein grundlegendes Konzept in der (statistischen) Programmierung sind **Variablen**. 
 
-Eine Variable ermöglicht es Ihnen einen Wert (z.B. 4) oder ein Objekt (z.B. Funktionsbeschreibung) in R zu speichern. Später können Sie den Namen der Variable nutzen, um einfach auf den Wert oder das Objekt zuzugreifen, der innerhalb dieser Variable hinterlegt ist.  
+Eine Variable ermöglicht es Ihnen einen Wert (z.B. 4) oder ein Objekt (z.B. Funktionsbeschreibung) in R zu speichern. Später können Sie den Namen der Variable nutzen, um einfach auf den Wert oder das Objekt zuzugreifen, die innerhalb dieser Variable hinterlegt sind.  
 
 Sie können den Wert 4 der Variable `my_var` zuweisen.
 
@@ -176,14 +176,14 @@ x
 ```{r}
 test_object("x", undefined_msg = "Achten Sie darauf, die Variable `x` zu bestimmen.",
             incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Wert für `x` zugeordnet haben.") 
-success_msg("Gute Arbeit! Haben Sie bemerkt, dass R in der Konsole nicht den Wert der Variable ausgibt, wenn Sie die Zuordnung gemacht haben? `x <- 42` erzeugt keine Ausgabe, weil R davon ausgeht, dass Sie diese Variable in der Zukunft benötigen. Ansonsten hätten Sie den Wert in der Variable nicht an der ersten Stelle gespeichert, nicht wahr? Fahren Sie mit der nächsten Übung fort!")
+success_msg("Gute Arbeit! Haben Sie bemerkt, dass R in der Konsole nicht den Wert der Variable ausgibt, wenn Sie die Zuordnung gemacht haben? `x <- 42` erzeugt keine Ausgabe, weil R davon ausgeht, dass Sie diese Variable in der Zukunft benötigen. Ansonsten hätten Sie den Wert in der Variable nicht an der ersten Stelle gespeichert, nicht wahr? Fahren Sie bitte mit der nächsten Übung fort!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:c5944b90eb
 ## Variablenzuweisung (2)
 
-Angenommen, Sie haben einen Obstkorb mit fünf Äpfeln. Als Datenanalyst in der Ausbildung, möchten Sie die Anzahl an Äpfeln in einer Variable mit den Namen `my_apples` speichern. 
+Angenommen, Sie haben einen Obstkorb mit fünf Äpfeln. Als angehender Datenanalyst möchten Sie die Anzahl an Äpfeln in einer Variable mit den Namen `my_apples` speichern. 
 
 *** =instructions
 - Tippen Sie den folgenden Code im Editor ein: `my_apples <- 5`. Dadurch wird der Wert 5 der Variable `my_apples` zugewiesen.
@@ -191,7 +191,7 @@ Angenommen, Sie haben einen Obstkorb mit fünf Äpfeln. Als Datenanalyst in der 
 - Klicken Sie auf 'Antwort abschicken' und schauen Sie auf die Konsole: Sie sehen, dass die Zahl 5 ausgegeben wurde. Also verbindet R die Variable `my_apples` mit dem Wert 5.
 
 *** =hint
-Erinnern Sie sich daran, dass wenn Sie in R einen Wert oder ein Objekt einer Variable zuweisen, können Sie den Zuweisungsoperator `<-` verwenden. Alternativ können Sie `=` benutzen, aber der Operator `<-` ist in der R Community weit verbreitet.
+Erinnern Sie sich daran, dass wenn Sie in R einen Wert oder ein Objekt einer Variable zuweisen, Sie den Zuweisungsoperator `<-` verwenden können. Alternativ können Sie `=` benutzen, aber der Operator `<-` ist in der R-Community weit verbreitet.
 
 *** =pre_exercise_code
 ```{r}
@@ -222,14 +222,14 @@ test_object("my_apples",
             undefined_msg = "Bitte stellen Sie sicher, dass eine Variable `my_apples` definiert wurde.",
             incorrect_msg = "Stellen Sie sicher, dass Sie den richtigen Wert für `my_apples` zugeordnet haben.")
 test_output_contains("my_apples", incorrect_msg = "Haben Sie R explizit gesagt, dass die Variable `my_apples` in der Konsole ausgegeben werden soll?")
-success_msg("Großartig! Machen Sie mit der nächsten Übung weiter!")
+success_msg("Großartig! Machen Sie bitte mit der nächsten Übung weiter!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1c1bd25045
 ## Variablenzuweisung (3)
 
-Jeder leckere Obstkorb braucht Orangen, sodass Sie sich entscheiden sechs Orangen hinzuzufügen. Als Datenanalyst ist Ihr Reflex sofort die Variable `my_oranges` zu erstellen und den Wert 6 zuzuweisen. Als nächstes wollen Sie kalkulieren, wie wiele Stücke Obst Sie insgesamt haben. Da Sie sinnvolle Namen für diese Werte gegeben haben, können Sie nun auf eine einfache Weise codieren.
+Jeder leckere Obstkorb braucht Orangen, sodass Sie sich entscheiden sechs Orangen hinzuzufügen. Als Datenanalyst ist Ihr Reflex sofort die Variable `my_oranges` zu erstellen und den Wert 6 zuzuweisen. Als nächstes wollen Sie kalkulieren, wie viel Obst Sie insgesamt haben. Da Sie sinnvolle Namen für diese Werte gegeben haben, können Sie nun auf eine einfache Weise codieren.
 
 ```
 my_apples + my_oranges
@@ -289,12 +289,12 @@ success_msg("Schön! Ein großer Vorteil mit Variablen zu arbeiten ist die Wiede
 --- type:NormalExercise xp:100 skills:1 key:915fcc7c99
 ## Äpfel und Orangen
 
-Im Allgemeinen ist es bekannt, dass man Äpfel und Orangen nicht zusammenaddieren kann. Aber hey, das ist das, was Sie gemacht haben, nicht wahr :-)? Die Variablen `my_apples` und `my_oranges` haben eine Zuordnung in der vorherigen Übung erhalten. In R arbeitet der Operator `+` mit numerischen Variablen. Wenn Sie für die Variable `my_oranges` (siehe im Editor) einen Textwert zugeordnet haben und dann versuchen "apples" und "oranges" zu addieren, werden Sie schell feststellen, dass dies nicht möglich ist. Sie können nicht numerische Variablen und Zeichenvariablen addieren und der Variable `my_fruit` zuordnen. 
+Im Allgemeinen ist es bekannt, dass man Äpfel und Orangen nicht zusammenaddieren kann. Aber haben Sie nicht eben genau das gemacht? Die Variablen `my_apples` und `my_oranges` haben eine Zuordnung in der vorherigen Übung erhalten. In R arbeitet der Operator `+` mit numerischen Variablen. Wenn Sie für die Variable `my_oranges` (siehe im Editor) einen Textwert zugeordnet haben und dann versuchen "apples" und "oranges" zu addieren, werden Sie schell feststellen, dass dies nicht möglich ist. Sie können nicht numerische Variablen und Zeichenvariablen addieren und der Variable `my_fruit` zuordnen. 
 
 
 *** =instructions
 - Klicken Sie auf 'Antwort abschicken' und lesen Sie die Fehlermeldung. Versuchen Sie zu verstehen, warum es nicht funktioniert hat.
-- Passen Sie den Code so an, dass R weiß, dass Sie 6 Orangen und einen Obstkorb mit 11 Stücke vom Obst haben.
+- Passen Sie den Code so an, dass R weiß, dass Sie 6 Orangen und einen Obstkorb mit 11 Obststücken haben.
 
 *** =hint
 Sie haben den numerischen Wert `6` an die Variable `my_oranges`, anstelle des Zeichenwertes `"six"`, zugeordnet. Beachten Sie nun, wie die Anführungszeichen verwendet werden, um zu zeigen, dass `"six"` ein Zeichen ist.
@@ -337,7 +337,7 @@ test_object("my_apples", incorrect_msg = "Stellen Sie sicher, dass `my_apples` n
 test_object("my_oranges", incorrect_msg = "Stellen Sie sicher, dass `my_oranges` gleich `6` ist.")
 test_object("my_fruit", incorrect_msg = "Der Wert von `my_fruit` ist nicht korrekt. Er sollte 11 sein, also die Summe von `my_apples` und `my_oranges`.")
 test_output_contains("my_fruit", incorrect_msg = "Entfernen Sie nicht die Zeile, die `my_fruit` ausgibt.")
-success_msg("Wunderbar, Sie leisten gute Arbeit. Fahren die mit der nächsten Übung fort.")
+success_msg("Sehr schön, Sie machen gute Fortschritte. Fahren die mit der nächsten Übung fort.")
 ```
 
 
@@ -351,7 +351,7 @@ R arbeitet mit zahlreichen Datentypen. Einige der grundlegendsten Datentypen sin
 - Boolesche Werte (`TRUE` oder `FALSE`) werden auch **logical** (logisch) genannt.
 - Text- (oder String-) Werte werden auch als **characters** (Zeichen) bezeichnet.
 
-Beachten Sie, wie die Anführungszeichen auf der rechten Seite zeigt, dass "einige Texte" ein Zeichen sind.
+Beachten Sie, wie die Anführungszeichen auf der rechten Seite zeigen, dass "einige Texte" ein Zeichen sind.
 
 *** =instructions
 Ändern Sie die Werte von:
@@ -400,14 +400,14 @@ my_logical <- FALSE
 test_object("my_numeric", incorrect_msg = "Haben Sie die Erklärung von `my_numeric` korrekt verändert, sodass der Wert 42 enthält?")
 test_object("my_character", incorrect_msg = "Haben Sie `my_character` zu `\"universe\"` korrekt verändert? Vergessen Sie nicht die Anführungszeichen!")
 test_object("my_logical", incorrect_msg = "Haben Sie `my_logical` zu `FALSE` korrekt verändert? Alle Buchstaben von `FALSE` sollten großgeschrieben sein!")
-success_msg("Gute Arbeit! Machen Sie mit der nächsten Übung weiter.")
+success_msg("Gute Arbeit! Bitte machen Sie mit der nächsten Übung weiter.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:99b549229d
 ## Was ist dieser Datentyp?
 
-Können Sie sich daran erinnern, dass wenn Sie `5 + "six"` addieren, Sie eine Fehlermeldung aufgrund fehlender Übereinstimmung in Datentypen bekamen? Vermeiden Sie die Situation vorher, indem Sie die Variable prüfen. Dafür können Sie die Funktion nutzen, wie Sie es auf der rechten Seite sehen können.
+Können Sie sich daran erinnern, dass wenn Sie `5 + "six"` addieren, Sie eine Fehlermeldung aufgrund fehlender Übereinstimmung in Datentypen bekamen? Vermeiden Sie die Situation vorher, indem Sie die Variable prüfen. Dafür können Sie die Funktion so nutzen, wie Sie es auf der rechten Seite sehen können.
 
 *** =instructions
 Vervollständigen Sie den Code im Editor und geben Sie die Klassen von `my_character` und `my_logical` aus. 
@@ -467,6 +467,5 @@ test_output_contains("class(my_logical)",
                      incorrect_msg = sprintf(patt, "my_logical"))
 success_msg("Herzlichen Glückwunsch! Das war die letzte Übung für dieses Kapitel. Gehen Sie zum nächsten Kapitel. Dort tauchen Sie in die Welt der Vektoren ein!")
 ```
-
 
 
