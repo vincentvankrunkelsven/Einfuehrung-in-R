@@ -1,11 +1,9 @@
 --- 
 title_meta  : Kapitel 3
 title       : Matrizen
-description : In diesem Kapitel werden Sie lernen, wie Sie in R mit Matrizen arbeiten. Am Ende dieses Kapitels werden Sie in der Lage sein Matrizen zu erstellen und verstehen, wie Sie grundlegende Berechnungen mit ihnen machen können.
-
-
+description : "In diesem Kapitel werden Sie lernen, wie Sie in R mit Matrizen arbeiten. Am Ende dieses Kapitels werden Sie in der Lage sein Matrizen zu erstellen und verstehen, wie Sie grundlegende Berechnungen mit ihnen machen können.
 Sie werden Matrizen verwenden um die Kassenzahlen von Star Wars analysieren.
-Möge die Macht mit Ihnen sein!
+Möge die Macht mit Ihnen sein!"
 
 --- type:NormalExercise xp:100 skills:1 key:d61aeba84c
 ## Was ist eine Matrix?
