@@ -1,9 +1,7 @@
 --- 
 title_meta  : Kapitel 3
 title       : Matrizen
-description : "In diesem Kapitel werden Sie lernen, wie Sie in R mit Matrizen arbeiten. Am Ende dieses Kapitels werden Sie in der Lage sein Matrizen zu erstellen und verstehen, wie Sie grundlegende Berechnungen mit ihnen machen können.
-Sie werden Matrizen verwenden um die Kassenzahlen von Star Wars analysieren.
-Möge die Macht mit Ihnen sein!"
+description : "In diesem Kapitel werden Sie lernen, wie Sie in R mit Matrizen arbeiten. Am Ende dieses Kapitels werden Sie in der Lage sein, Matrizen zu erstellen und zu verstehen, wie Sie grundlegende Berechnungen mit ihnen machen können. Sie werden Matrizen verwenden um die Kasseneinnahmen der Star Wars Filme zu analysieren. Möge die Macht mit Ihnen sein!"
 
 --- type:NormalExercise xp:100 skills:1 key:d61aeba84c
 ## Was ist eine Matrix?
@@ -18,15 +16,15 @@ matrix(1:9, byrow = TRUE, nrow = 3)
 
 In der Funktion [`matrix()`](http://www.rdocumentation.org/packages/base/functions/matrix):
 
-- Das erste Argument ist die Sammlung von Elementen, die R in die Zeilen und Spalten einer Matrix ordnet. Hier verwenden wir `1:9`, die eine Abkürzung für `c(1, 2, 3, 4, 5, 6, 7, 8, 9)` ist.
-- Das Argument `byrow` zeigt an, dass die Matrix zeilenweise gefüllt wird. Wenn wir die Matrix spaltenweise füllen wollen, dann verwenden wir einfach`byrow = FALSE`. 
+- Das erste Argument ist die Sammlung von Elementen, die R in die Zeilen und Spalten einer Matrix ordnet. Hier verwenden wir `1:9`, was eine Abkürzung für `c(1, 2, 3, 4, 5, 6, 7, 8, 9)` ist.
+- Das Argument `byrow` zeigt an, dass die Matrix zeilenweise befüllt wird. Wenn wir die Matrix spaltenweise füllen wollen, dann verwenden wir einfach`byrow = FALSE`. 
 - Das dritte Argument `nrow` zeigt an, dass die Matrix drei Zeilen haben sollte.
 
 *** =instructions
-Erstellen Sie eine Matrix mit 3 Zeilen mit den Zahlen 1 bis 9, gefüllt zeilenweise. 
+Erstellen Sie eine Matrix mit 3 Zeilen mit den Zahlen 1 bis 9, befüllt zeilenweise. 
 
 *** =hint
-Lesen Sie die Aufgabe sorgfältig, denn die Antwort ist darin gegeben!
+Lesen Sie die Aufgabe sorgfältig, denn die Antwort ist darin inthalten!
 
 *** =pre_exercise_code
 ```{r}
@@ -47,9 +45,9 @@ matrix(1:9, byrow = TRUE, nrow = 3)
 *** =sct
 ```{r}
 test_function("matrix", c("data", "byrow", "nrow"),
-              incorrect_msg = "Haben Sie eine richtige Matrix erstellt? Werfen Sie einen Blick auf die Aufgabe, die Antwort ist dort gegeben!")
+              incorrect_msg = "Haben Sie eine richtige Matrix erstellt? Werfen Sie einen Blick auf die Aufgabe, die Antwort ist dort inhalten!")
 test_output_contains("matrix(1:9, byrow=TRUE, nrow=3)",
-                     incorrect_msg = "Es scheint ein Problem in der Matrix Definition zu geben. Werfen Sie einen Blick auf die Aufgabe, die Antwort ist dort gegeben!")
+                     incorrect_msg = "Es scheint ein Problem in der Matrix Definition zu geben. Werfen Sie einen Blick auf die Aufgabe, die Antwort ist dort inthalten!")
 success_msg("Sehr gut! Machen Sie mit der nächsten Übung weiter.")
 ```
 
@@ -57,14 +55,13 @@ success_msg("Sehr gut! Machen Sie mit der nächsten Übung weiter.")
 --- type:NormalExercise xp:100 skills:1 key:effc2fb945
 ## Matrizen Analyse
 
-Es ist Zeit Ihre Hände schmutzig zu machen. In der folgenden Übung werden Sie die Kassenzahlen der Star Wars Franchise analysieren. Möge die Macht mit Ihnen sein!
+Es ist an der Zeit sich die Hände schmutzig zu machen. In der folgenden Übung werden Sie die Kasseneinnahmen des Star Wars Franchise analysieren. Möge die Macht mit Ihnen sein!
 
-Im Editor sind drei Vektoren definiert. Jeder stellt die Kassenzahlen der ersten drei Filme dar. Das erste Element jedes Vektors zeigt die USA-Kassenzahlen, das zweite Element bezieht sich auf die Nicht-USA-Kassenzahlen (Quelle: Wikipedia).
-
-In dieser Übung werden Sie all diese Zahlen in einem einzigen Vektor kombinieren. Als Nächstes werden Sie eine Matrix aus diesen Vektoren bilden.
+Im Editor sind drei Vektoren definiert. Jeder stellt die Kassenzahlen der ersten drei Filme dar. Das erste Element jedes Vektors zeigt die Kasseneinnahmen der USA, das zweite Element bezieht sich auf die Einnahmen außerhalb der USA. (Quelle: Wikipedia).
+In dieser Übung werden Sie all diese Zahlen in einem einzigen Vektor kombinieren. Als Nächstes werden Sie eine Matrix aus diesem Vektoren bilden.
 
 *** =instructions
-- Verwenden Sie `c(new_hope, empire_strikes, return_jedi)`, um die drei Vektoren in einen Vektor zu verbinden. Nennen Sie diesen Vektor `box_office`.
+- Verwenden Sie `c(new_hope, empire_strikes, return_jedi)`, um die drei Vektoren zu einem Vektor zu verbinden. Nennen Sie diesen Vektor `box_office`.
 - Erstellen Sie eine Matrix mit 3 Zeilen, wobei jede Zeile einen Film darstellt. Verwenden Sie die Funktion `matrix()` dazu. Das erste Argument ist der Vektor `box_office`, das alle Kassenzahlen enthält. Als Nächstes werden Sie `nrow = 3` und `byrow = TRUE` angeben. Benennen Sie die resultierende Matrix `star_wars_matrix`.
 
 *** =hint
@@ -125,9 +122,9 @@ success_msg("Im Moment ist die Macht mit Ihnen! Fahren Sie mit der nächsten Üb
 
 --- type:NormalExercise xp:100 skills:1 key:f734e8bf74
 ## Benennung einer Matrix
-Damit Sie sich daran erinnern, was in `star_wars_matrix` gespeichert ist, möchten Sie die Filmnamen in die Zeilen hinzufügen. Nicht nur, dass diese Ihnen helfen werden, die Daten zu lesen, sie sind auch sehr nützlich, bestimmte Elemente aus der Matrix zu wählen.
+Damit Sie sich daran erinnern, was in star_wars_matrix gespeichert ist, sollten Sie die Filmnamen den Zeilen hinzufügen. Nicht nur, dass diese Ihnen helfen werden, die Daten zu lesen, sie sind auch sehr nützlich um bestimmte Elemente aus der Matrix zu wählen.
+Ähnlich wie bei Vektoren, können Sie Namen für die Zeilen und Spalten einer Matrix hinzufügen.
 
-Ähnlich wie bei den Vektoren, können Sie die Namen für die Zeilen und Spalten einer Matrix hinzufügen.
 
 ```
 rownames(my_matrix) <- row_names_vector
@@ -217,9 +214,9 @@ success_msg("Sehr gut! Du bist auf dem Weg ein R Jedi zu werden! Fahren Sie mit 
 --- type:NormalExercise xp:100 skills:1 key:3fd7499a12
 ## Die Berechnung der weltweiten Kinokassen 
 
-Das wichtigste für einen Film, um eine Legende in Hollywood zu werden, ist ihre weltweite Kassenzahl.
+Das wichtigste für einen Film, um eine Legende in Hollywood zu werden, sind die weltweiten Einnahmen an den Kinokassen.
+Um die Gesamteinnahmen für die drei Star Wars Filme zu berechnen, müssen Sie die Summe von den Spalten US-Einnahmen und Non-US-Einnahmen nehmen.
 
-Um die Gesamteinnahmen der Kassen für die drei Star Wars Filme zu berechnen, müssen Sie die Summe von den Spalten US-Einnahmen und Non-US-Einnahmen nehmen.
 
 In R berechnet die Funktion [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) bequem die Summen für jede Zeile einer Matrix. Diese Funktion erstellt einen neuen Vektor:
 
@@ -343,12 +340,12 @@ success_msg("Gute Arbeit! Nachdem Sie eine Spalte der Matrix hinzugefügt haben,
 
 Genau wie jede Aktion eine Reaktion hat, hat jede [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) eine [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind). (Zugegeben, unsere Metaphern sind ziemlich schlecht.)
 
-Ihr R Arbeitsbereich, in dem alle Variablen 'live' definiert sind ([prüfen Sie, was ein Arbeitsbereich ist](http://www.statmethods.net/interface/workspace.html)), wurden bereits initialisiert und enthält zwei Matrizen:
+Ihr R Workspace, in dem alle Variablen 'live' definiert sind ([prüfen Sie, was ein Workspace ist](http://www.statmethods.net/interface/workspace.html)), wurde bereits initialisiert und enthält zwei Matrizen:
 
-- `star_wars_matrix` , die wir alle zusammen mit den Daten der ersten Triologie verwendet haben
-- `star_wars_matrix2`, mit ähnlichen Daten für die zweite Triologie
+- `star_wars_matrix` , die wir alle zusammen mit den Daten der ersten Trilogie verwendet haben
+- `star_wars_matrix2`, mit ähnlichen Daten für die zweite Trilogie
 
-Geben Sie den Namen dieser Matrizen in der Konsole ein und drücken Sie auf Enter, wenn Sie einen genaueren Blick haben wollen. Wenn Sie den Inhalt des Arbeitsbereichs prüfen möchten, können Sie `ls()` in der Konsole eingeben.
+Geben Sie die Namen dieser Matrizen in der Konsole ein und drücken Sie auf Enter, wenn Sie einen genaueren Blick haben wollen. Wenn Sie den Inhalt des Workspaces prüfen möchten, können Sie `ls()` in der Konsole eingeben.
 
 *** =instructions
 Verwenden Sie `rbind()`, um `star_wars_matrix` und `star_wars_matrix2` in dieser Reihenfolge zusammenzufassen. Weisen Sie die resultierende Matrix `all_wars_matrix` zu.
@@ -416,7 +413,7 @@ success_msg("Wunderbar! Fahren Sie mit der nächsten Übung fort und sehen Sie, 
 --- type:NormalExercise xp:100 skills:1 key:1bfe5ae096
 ## Die Gesamteinnahmen der Kinokassen für die gesamte Saga
 
-Genau wie jede [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) hat sie [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), jede [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) hat sie eine [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Ihr R Arbeitsbereich enthält bereits die `all_wars_matrix`, die Sie in der vorherigen Übung konstruiert hatten; geben Sie `all_wars_matrix` ein, um einen anderen Blick zu haben. Lassen Sie uns die Gesamteinnahmen der Kinokassen für die gesamte Saga berechnen.
+Genau wie jedes [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) ein [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) hat, hat jedes [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) ein [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Ihr R Workspace enthält bereits die `all_wars_matrix`, die Sie in der vorherigen Übung konstruiert hatten; geben Sie `all_wars_matrix` ein, um einen weiteren Blick zu haben. Lassen Sie uns die Gesamteinnahmen der Kinokassen für die gesamte Saga berechnen.
 
 *** =instructions
 - Berechnen Sie die Gesamteinnahmen für die USA und Non-USA Region und weisen Sie sie dem `total_revenue_vector` zu. Sie können die Funktion [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) verwenden.
@@ -473,7 +470,7 @@ success_msg("Bellissimo! Gehen Sie zur nächsten Übung.")
 - `my_matrix[1,2]` wählt das Element in der ersten Reine und zweiten Spalte.
 - `my_matrix[1:3,2:4]` ergibt in einer Matrix mit den Daten in den Zeilen 1, 2, 3 und Spalten 2, 3, 4.
 
-Wenn Sie alle Elemente einer Zeile oder einer Spalte auswählen möchten, wird keine Zahl vor oder nach dem Komme benötigt, bzw.:
+Wenn Sie alle Elemente einer Zeile oder einer Spalte auswählen möchten, wird keine Zahl vor oder nach dem Komma benötigt, bzw.:
 
 - `my_matrix[,1]` wählt alle Elemente der ersten Spalte aus
 - `my_matrix[1,]` wählt alle Elemente der ersten Zeile aus
@@ -550,14 +547,14 @@ success_msg("Gut! Weiter zur nächsten Übung.")
 --- type:NormalExercise xp:100 skills:1 key:c81c656f06
 ## Rechnen mit Matrizen
 
-Ähnlich wie Sie es bei den Vektoren gelernt haben, gibt es auch bei den Matrizen in R Standardoperatoren, wie `+`, `-`, `/`, `*`, usw., die in einer elementweise Art in Matrizen arbeiten.
+Ähnlich wie Sie es bei den Vektoren gelernt haben, gibt es auch bei den Matrizen in R Standardoperatoren, wie `+`, `-`, `/`, `*`, usw., die in einer elementweisen Art mit Matrizen arbeiten.
 
 Zum Beispeil: `2 * my_matrix` multipliziert jedes Element von `my_matrix` mal zwei.
 
-Als neu eingestellter Datenanalyst für Lucasfilm ist Ihre Aufgabe herauszufinden, wie viele Besucher in jedem Film für jeden geografischen Bereich gingen. Sie haben schon die Gesamteinnahmen in `all_wars_matrix`. Angenommen der Preis pro Ticket lag bei 5 Dollar. Teilen Sie einfach die Kasseneinnahmen durch die Ticketpreise, dann ergibt sich die Anzahl der Besucher.
+Als neu eingestellter Datenanalyst für Lucasfilm ist es Ihre Aufgabe herauszufinden, wie viele Besucher in jedem Film aus jeden geografischen Bereich kamen. Sie haben schon die Gesamteinnahmen in `all_wars_matrix`. Angenommen der Preis pro Ticket lag bei 5 Dollar. Teilen Sie einfach die Kasseneinnahmen durch die Ticketpreise, dann ergibt sich die Anzahl der Besucher.
 
 *** =instructions
-- Teilen Sie `all_wars_matrix` durch 5, geben Sie die Anzahl der Besucher in Millionen. Weisen Sie die resultierende Matrix `visitors` zu.
+- Teilen Sie `all_wars_matrix` durch 5, geben Sie die Anzahl der Besucher in Millionen an. Weisen Sie die resultierende Matrix `visitors` zu.
 - Geben Sie `visitors` aus, so dass Sie einen Blick darauf werfen können.
 .
 
@@ -620,7 +617,7 @@ _Diejenigen, die mit Matrizen vertraut sind, sollten beachten, dass dies nicht d
 - Berechnen Sie die durchschnittliche Anzahl der USA Besucher; geben Sie das Ergebnis aus.
 
 *** =hint
-- Sie können die Funktion `mean()` verwenden, um den Mittelwert der Eingänge an die Funktion zu berechnen.
+- Sie können die Funktion `mean()` verwenden, um den Mittelwert des Inputs der Funktion zu berechnen.
 - Um die Besucheranzahl in den USA zu erhalten, wählen Sie die erste Spalte von `visitors` mit `visitors[ ,1]` aus.
 
 *** =pre_exercise_code
