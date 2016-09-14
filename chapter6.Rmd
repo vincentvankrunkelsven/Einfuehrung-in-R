@@ -1,24 +1,24 @@
 --- 
-title_meta  : Chapter 6
-title       : Lists
-description : Lists, as opposed to vectors, can hold components of different types, just like your to-do list at home or at work. This intro to R chapter will teach you how to create, name and subset these lists.
+title_meta  : Kapitel 6
+title       : Listen
+description : Listen, im Vergleich zu Vektoren, können sie Komponenten unterschiedlicher Typen haben, genau wie Ihre To-do Liste zu Hause oder bei der Arbeit. In dieser Einführung in R lernen Sie, wie Sie Listen erstellen, benennen und unterteilen. 
 
 --- type:NormalExercise xp:100 skills:1 key:2afcdb6a76ec91bf266de9b2ac295d844d7bb004
-## Lists, why would you need them?
+## Warum brauchen Sie Listen?
 
-Congratulations! At this point in the course you are already familiar with:
+Herzlichen Glückwunsch! An dieser Stelle sind Sie im Kurs schon vertraut mit:
 
-- **Vectors** (one dimensional array): can hold numeric, character or logical values. The elements in a vector all have the same data type.
-- **Matrices** (two dimensional array): can hold numeric, character or logical values. The elements in a matrix all have the same data type.
-- **Data frames** (two-dimensional objects): can hold numeric, character or logical values. Within a column all elements have the same data type, but different columns can be of different data type.
+- **Vectors** (eindimensionales Array): kann nummerische, Zeichen oder logische Werte enthalten. Die Elemente in einem Vektor haben alle die gleichen Datentypen.
+- **Matrices** (zweidimensionales Array): kann nummerische, Zeichen oder logische Werte enthalten. Die Elemente in einer Matrix haben alle die gleichen Datentypen.
+- **Data frames** (zweidimensionale Objekte): kann nummerische, Zeichen oder logische Werte enthalten. Innerhalb einer Spalte haben alle Elemente den gleichen Datentyp, aber verschiedene Spalten können von unterschiedlichen Datentypen sein.
 
-Pretty sweet for an R newbie, right? ;-)
+Ziemlich gut für einen R-Neuling, nicht wahr? ;-)
 
 *** =instructions
-Click 'Submit Answer' to start learning everything about lists!
+Klick Sie einfach auf 'Antwort abschicken', um alles über Listen zu lernen!
 
 *** =hint
-Just click the 'Submit Answer' button.
+Klicken Sie einfach auf den Knopf 'Antwort abschicken'.
 
 *** =pre_exercise_code
 ```{r}
@@ -27,34 +27,34 @@ Just click the 'Submit Answer' button.
 
 *** =sample_code
 ```{r}
-# Just click the 'Submit Answer' button.
+# Klicken Sie einfach auf den Knopf 'Antwort abschicken'.
 ```
 
 *** =solution
 ```{r}
-# Just click the 'Submit Answer' button.
+# Klicken Sie einfach auf den Knopf 'Antwort abschicken'.
 ```
 
 *** =sct
 ```{r}
-success_msg("Ready, set, go! Continue to the next exercise.")
+success_msg("Achtung, fertig, los! Machen Sie bitte mit der nächsten Übung weiter.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:68f93c5c504616bd18876da52cd123277d56fc8b
-## Lists, why would you need them? (2)
+## Warum brauchen Sie Listen? (2)
 
-A **list** in R is similar to your to-do list at work or school: the different items on that list most likely differ in length, characteristic, type of activity that has to do be done, ... 
+Eine **list** in R ist ähnlich zu Ihren to-do Listen bei der Arbeit oder in der Schule: die verschiedenen Sachen auf der Liste unterscheiden sich vermutlich in Länge, Merkmal, Art der Aktivität, die noch getan werden muss, ... 
 
-A list in R allows you to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.
+Eine Liste in R ermöglicht es Ihnen, eine Vielzahl von Objekten unter einem Namen zu sammeln (das heißt, der Name der Liste) in einer geordneten Art und Weise. Diese Objekte können Matrizen, Vektoren, Datenframes, auch andere Listen usw. sein. Es ist nicht erforderlich, dass diese Objekte miteinander in einer Beziehung stehen.
 
-You could say that a list is some kind super data type: you can store practically any piece of information in it!
+Sie könnten sagen, dass eine Liste eine Art Super Datentyp ist: Sie können jede praktische Information darin speichern!
 
 *** =instructions
-Click 'Submit Answer' to start the first exercise on lists.
+Klicken Sie auf 'Antwort abschicken', um die erste Übung auf der Liste zu starten.
 
 *** =hint
-Click 'Submit Answer' to start the first exercise on lists.
+Klicken Sie auf 'Antwort abschicken', um die erste Übung auf der Liste zu starten.
 
 *** =pre_exercise_code
 ```{r}
@@ -63,36 +63,36 @@ Click 'Submit Answer' to start the first exercise on lists.
 
 *** =sample_code
 ```{r}
-# Click 'Submit Answer' to start the first exercise on lists.
+# Klicken Sie auf 'Antwort abschicken', um die erste Übung auf der Liste zu starten.
 ```
 
 *** =solution
 ```{r}
-# Click 'Submit Answer' to start the first exercise on lists.
+# Klicken Sie auf 'Antwort abschicken', um die erste Übung auf der Liste zu starten.
 ```
 
 *** =sct
 ```{r}
-success_msg("Cool. Let's get our hands dirty!")
+success_msg("Cool. Machen wir uns unsere Hände schmutzig!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:4beee9cb532c889903218b49b83ab5ef133eac83
-## Creating a list
+## Erstellen einer Liste
 
-Let us create our first list! To construct a list you use the function [`list()`](http://www.rdocumentation.org/packages/base/functions/list): 
+Lassen Sie uns unsere erste Liste erstellen! Zum Aufbau einer Liste verwenden Sie die Funktion [`list()`](http://www.rdocumentation.org/packages/base/functions/list): 
 
 ```
 my_list <- list(comp1, comp2 ...)
 ```
 
-The arguments to the list function are the list components. Remember, these components can be matrices, vectors, other lists, ...
+Die Argumente für die Listenfunktion sind die Listenkomponenten. Denken Sie daran, dass diese Komponenten Matrizen, Vektoren, andere Listen sein können, ...
 
 *** =instructions
-Construct a list, named `my_list`, that contains the variables `my_vector`, `my_matrix` and `my_df` as list components.
+Erstellen Sie eine Liste mit dem Namen `my_list`, die die Variablen `my_vector`, `my_matrix` und `my_df` als Listenkomponenten enthält. 
 
 *** =hint
-Use the [`list()`](http://www.rdocumentation.org/packages/base/functions/list) function with `my_vector`, `my_matrix` and `my_df` as arguments separated by a comma.
+Verwenden Sie die Funktion [`list()`](http://www.rdocumentation.org/packages/base/functions/list) mit `my_vector`, `my_matrix` und `my_df` als Argumente durch ein Komma getrennt.
 
 *** =pre_exercise_code
 ```{r}
@@ -101,59 +101,59 @@ Use the [`list()`](http://www.rdocumentation.org/packages/base/functions/list) f
 
 *** =sample_code
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vektoren mit der Numerik von 1 bis 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matrix mit der Numerik von 1 bis 9
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Die ersten 10 Elemente der eingebauten Datenframe mtcars
 my_df <- mtcars[1:10,]
 
-# Construct list with these different elements:
+# Erstellen Sie eine Liste mit diesen verschiedenen Elementen: 
 my_list <- 
 ```
 
 *** =solution
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vektoren mit der Numerik von 1 bis 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matrix mit der Numerik von 1 bis 9
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Die ersten 10 Elemente der eingebauten Datenframe mtcars
 my_df <- mtcars[1:10,]
 
-# Construct list with these different elements:
+# Erstellen Sie eine Liste mit diesen verschiedenen Elementen: 
 my_list <- list(my_vector, my_matrix, my_df)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definition of the variables `my_vector`, `my_matrix` or `my_df`!"
+msg = "Entfernen oder ändern Sie nicht die Definition der Variablen `my_vector`, `my_matrix` oder `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "It looks like `my_list` does not contain the correct elements. Make sure to pass the variables `my_vector`, `my_matrix` and `my_df` to the `list()` function, separated by commas, in this order.")
-success_msg("Wonderful! Head over to the next exercise.")
+            incorrect_msg = "Es scheint so, dass `my_list` nicht die richtigen Elemente enthält. Stellen Sie sicher, um die Variablen `my_vector`, `my_matrix` und `my_df` der Funktion `list()` zu übergeben, müssen Sie jeweils mit einem Komma getrennt werden und genau in dieser Reihenfolge stehen.")
+success_msg("Wunderbar! Gehen Sie bitte zur nächsten Übung.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:89dd0126568b1ff5a84033c571907a8a282245e4
-## Creating a named list
+## Erstellen einer benannten Liste
 
-Well done, you're on a roll!
+Gut gemacht, Sie sind in Fahrt!
 
-Just like on your to-do list, you want to avoid not knowing or remembering what the components of your list stand for. That is why you should give names to them: 
+Genau wie auf Ihrer to-do-Liste, möchten Sie nicht daran erinnert werden, wofür die Komponeten in Ihrer Liste stehen. Darum sollten Sie ihnen Namen vergeben:
 
 ```
 my_list <- list(name1 = your_comp1, 
                 name2 = your_comp2)
 ``` 
 
-This creates a list with components that are named `name1`, `name2`, and so on. If you want to name your lists after you've created them, you can use the `names()` function as you did with vectors. The following commands are fully equivalent to the assignment above:
+Dies erzeugt eine Liste mit den Komponenten, die `name1`, `name2` usw. genannt wurden. Wenn Sie ihre Liste benennen möchten, nachdem Sie sie erstellt haben, können Sie die Funktion `names()` verwenden. Die folgenden Befehle sind äquivalent zu der Zuordnung oben:
 
 ```
 my_list <- list(your_comp1, your_comp2)
@@ -161,15 +161,16 @@ names(my_list) <- c("name1", "name2")
 ```
 
 *** =instructions
-- Change the code of the previous exercise (see editor) by adding names to the components. Use for `my_vector` the name `vec`, for `my_matrix` the name `mat` and for `my_df` the name `df`. 
-- Print out `my_list` so you can inspect the output.
+- Ändern Sie den Code der vorherigen Übung (siehe Editor) durch das Hinzufügen der Namen für die Komponenten. Verwenden Sie für `my_vector` den Namen `vec`, für `my_matrix` den Namen `mat` und für `my_df` den Namen `df`. 
+- Geben Sie `my_list` aus, so dass Sie die Ausgabe kontrollieren können.
 
 *** =hint
-The first method of assigning names to your list components is the easiest. It starts like this: 
+Die erste Methode der Zuordnung von Namen zur Komponenten Ihrer Liste ist das einfachste. Es beginnt wie folgt:
+
 ```
 my_list <- list(vec = my_vector)
 ```
-Add the other two components in a similar fashion.
+Fügen Sie die anderen beiden Komponenten in ähnlicher Weise hinzu.
 
 *** =pre_exercise_code
 ```{r}
@@ -178,73 +179,73 @@ Add the other two components in a similar fashion.
 
 *** =sample_code
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vektoren mit der Numerik von 1 bis 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matrix mit der Numerik von 1 bis 99
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Die ersten 10 Elemente der eingebauten Datenframe mtcars
 my_df <- mtcars[1:10,]
 
-# Adapt list() call to give the components names
+# Bearbeiten Sie den Aufruf list(), um den Komponenten Namen zu geben
 my_list <- list(my_vector, my_matrix, my_df)
 
-# Print out my_list
+# Geben Sie my_list aus
 
 ```
 
 *** =solution
 ```{r}
-# Vector with numerics from 1 up to 10
+# Vektoren mit der Numerik von 1 bis 10
 my_vector <- 1:10 
 
-# Matrix with numerics from 1 up to 9
+# Matrix mit der Numerik von 1 bis 99
 my_matrix <- matrix(1:9, ncol = 3)
 
-# First 10 elements of the built-in data frame mtcars
+# Die ersten 10 Elemente der eingebauten Datenframe mtcars
 my_df <- mtcars[1:10,]
 
-# Adapt list() call to give the components names
+# Bearbeiten Sie den Aufruf list(), um den Komponenten Namen zu geben
 my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
 
-# Print out my_list
+# Geben Sie my_list aus
 my_list
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definiton of the variables `my_vector`, `my_matrix` or `my_df`!"
+msg = "Entfernen oder ändern Sie nicht die Definition der Variablen `my_vector`, `my_matrix` oder `my_df`!"
 test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("my_list",
-            incorrect_msg = "It looks like `my_list` does not contain the correct elements.")
+            incorrect_msg = "Es scheint so, dass `my_list` nicht die richtigen Elemente enthält.")
 test_object("my_list", eq_condition = "equal",
-            incorrect_msg = "It looks like `my_list` does not contain the correct naming for the components. Make sure you use the names `vec`, `mat` and `df`, respectively. Check out the hint if you're struggling.");
-test_output_contains("my_list", incorrect_msg = "Don't forget to print `my_list` to the console! Simply add `my_list` on a new line in the editor.")
-success_msg("Great! Not only do you know how to construct lists now, you can also name them; a skill that will prove most useful in practice. Continue to the next exercise.")
+            incorrect_msg = "Es scheint so, dass `my_list` nicht den richtigen Namen für die Komponenten enthält. Achten Sie darauf die Namen `vec`, `mat` und `df` zu verwenden. Prüfen Sie den Hinweis, wenn Sie weiterkämpfen möchten.");
+test_output_contains("my_list", incorrect_msg = "Vergessen Sie nicht `my_list` in der Konsole auszugeben! Fügen Sie einfach `my_list` in einer neuen Zeile im Editor ein.")
+success_msg("Sehr gut! Nicht nur, dass Sie wissen, wie Listen jetzt erstellt werden, Sie können sie auch benennen; eine Fähigkeit, die besonders in der Praxis nützlich ist. Machen Sie bitte mit der nächsten Übung weiter.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:19fd17cc792ef870c1558b3a9bae08c1d1e3acae
-## Creating a named list (2)
+## Erstellen einer benannten Liste (2)
 
-Being a huge movie fan (remember your job at LucasFilms), you decide to start storing information on good movies with the help of lists. 
+Als ein großer Filmfan (nicht vergessen, Ihr Job bei LucasFilms), entscheiden Sie, mit Hilfe von Listen, Informationen über gute Filme zu sammeln und zu speichern.
 
-Start by creating a list for the movie "The Shining". We have already created the variables `mov`, `act` and `rev` in your R workspace. Feel free to check them out in the console.
+Beginnen Sie mit einer Liste für den Film "The Shining". Wir haben bereits die Variablen `mov`, `act` und `rev` in Ihrem R Arbeitsbereich erstellt. Fühlen Sie sich frei, um sie in der Konsole zu prüfen.
 
 *** =instructions
-Complete the code on the right to create `shining_list`; it contains three elements:
+Vervollständigen Sie den Code auf der rechten Seite, um `shining_list` zu erstellen; er enthält drei Elemente:
 
-- moviename: a character string with the movie title (stored in `mov`)
-- actors: a vector with the main actors' names (stored in `act`)
-- reviews: a data frame that contains some reviews (stored in `rev`)
+- Filmname: eine Zeichenkette mit den Filmtiteln (gespeichert in `mov`)
+- Schauspieler: ein Vektor mit den wichtigsten Schauspielnamen (gespeichert in `act`)
+- Bewertungen: ein Datenframe, der einige Bewertungen (gespeichert in `rev`) enthält
 
-Do not forget to name the list components accordingly (names are moviename, actors and reviews).
+Vergessen Sie nicht die Listenkomponenten zu benennen (Namen sind Filmnamen, Schauspieler und Bewertungen).
 
 *** =hint
-`shining_list <- list(moviename = mov)` is only part of the solution; it's your job to also add `act` and `rev` to the list, with the appropriate names.
+`shining_list <- list(moviename = mov)` ist nur ein Teil der Lösung; es ist Ihre Aufgabe, auch `act` und` rev` mit den entsprechenden Namen zur Liste hinzuzufügen.
 
 *** =pre_exercise_code
 ```{r}
@@ -259,61 +260,62 @@ rm(scores, sources, comments)
 
 *** =sample_code
 ```{r}
-# The variables mov, act and rev are available
+# Die Variablen mov, act und rev sind verfügbar
 
-# Finish the code to build shining_list
+# Beenden Sie die den Code shining_list
 shining_list <- list(moviename = mov)
 ```
 
 *** =solution
 ```{r}
-# The variables mov, act and rev are available
+# Die Variablen mov, act und rev sind verfügbar
 
-# Finish the code to build shining_list
+# Beenden Sie die den Code shining_list
 shining_list <- list(moviename = mov, actors = act, reviews = rev)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definition of the pre-set variables!"
+msg = "Entfernen oder ändern Sie nicht die Definition der vorgegebenen Variablen!"
 lapply(c("mov", "rev", "act"), test_object, undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list",
-            incorrect_msg = "It looks like `shining_list` does not contain the correct elements: the first element should be `mov`, the second element `act`, and the third `rev`.")
+            incorrect_msg = "Es scheint so, dass `shining_list` nicht die richtigen Elemente enthält: das erste Element sollte `mov`, das zweite Element `act`, und das dritte Element `rev` sein.")
 test_object("shining_list", eq_condition = "equal",
-            incorrect_msg = "It looks like `shining_list` does not contain the correct naming for the components: name the first element `moviename`, the second element `actors`, and the third element `reviews`.");
-success_msg("Wonderful! You now know how to construct and name lists. As in the previous chapters, let's look at how to select elements for lists. Head over to the next exercise")
+            incorrect_msg = "Es scheint so, dass `shining_list` nicht die richtigen Namen für die Komponenten enthält: Name des ersten Elements `moviename`, des zweiten Elements `actors`, und des dritten Elements `reviews`.");
+success_msg("Großartig! Sie wissen jetzt, wie Sie eine Liste erstellen und benennen. Wie in den vorherigen Kapiteln, schauen wir uns an, wie Sie die Elemente aus den Listen wählen können. Bitte gehen Sie zur nächsten Übung.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1ef3278944562caef64b9927dd2ddb6ee52334cd
-## Selecting elements from a list
+## Auswählen von Elementen aus einer Liste
 
-Your list will often be built out of numerous elements and components. Therefore, getting a single element, multiple elements, or a component out of it is not always straightforward. 
+Ihre Liste wird oft aus zahlreichen Elementen und Komponenten gebaut. Daher ein einzelnes Element, mehrere Elemente oder eine Komponente zu bekommen, ist nicht immer einfach.
 
-One way to select a component is using the numbered position of that component. For example, to "grab" the first component of `shining_list` you type 
+Ein Weg, um eine Komponente zu wählen, ist mit der nummerierten Position der Komponente zu arbeiten. Zum Beispiel: "grab" ist die erste Komponente von `shining_list`. Sie geben ein 
 
 ```
 shining_list[[1]]
 ```
 
-A quick way to check this out is typing it in the console. Important to remember: to select elements from vectors, you use single square brackets: `[ ]`. Don't mix them up!
+Eine schnelle Möglichkeit dies zu überprüfen, ist die Eingabe in der Konsole. Wichtig zu beachten: Elemente von Vektoren zu wählen, verwenden Sie einzelne eckigen Klammern: `[ ]`. Mischen Sie sie nicht!
 
-You can also refer to the names of the components, with `[[ ]]` or with the `$` sign. Both will select the data frame representing the reviews: 
+Sie können sich auch auf die Namen der Komponenten beziehen, mit `[[ ]]` oder mit dem `$` Zeichen. Beide wählen den Datenframe aus, der die Bewertungen repräsentiert:
 
 ```
 shining_list[["reviews"]]
 shining_list$reviews
 ``` 
 
-Besides selecting components, you often need to select specific elements out of these components. For example, with `shining_list[[2]][1]` you select from the second component, `actors` (`shining_list[[2]]`), the first element (`[1]`). When you type this in the console, you will see the answer is Jack Nicholson.
+
+Neben der Auswahl der Komponenten, müssen Sie häufig bestimmte Elemente aus diesen Komponenten auswählen. Zum Beispiel mit `shining_list[[2]][1]` wählen Sie die zweite Komponente `actors` (`shining_list[[2]]`), das erste Element (`[1]`) aus. Wenn Sie dies in der Konsole eingeben, sehen Sie die Antwort: Jack Nicholson.
 
 *** =instructions
-- Select from `shining_list` the vector representing the actors. Simply print out this vector.
-- Select from `shining_list` the second element in the vector representing the actors. Do a printout like before.
+- Wählen Sie von `shining_list` den Vektor, der die Schauspieler repräsentiert, aus. Geben Sie diesen Vektor aus.
+- Wählen Sie von `shining_list` das zweite Element in dem Vektor, der die Schauspieler repräsentiert, aus. Geben Sie auch hier das Ergebnis aus.
 
 *** =hint
-- To select the vector representing the actors, you can use `$actors`.
-- To select the third element in the vector representing the actors, you use `shining_list$actors[3]`. What needs to change to select the second element?
+- Um den Vektor zu wählen, der die Schauspieler repräsentiert, verwenden Sie `$actors`.
+- Um den Vektor zu wählen, der das dritte Element in dem Vektor, der die Schauspieler respräsentiert, verwenden Sie `shining_list$actors[3]`. Was muss sich ändern, um das zweite Element zu wählen?
 
 *** =pre_exercise_code
 ```{r}
@@ -322,64 +324,63 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_
 
 *** =sample_code
 ```{r}
-# shining_list is already pre-loaded in the workspace
+# shining_list ist bereits in Ihrem Arbeitsbereich geladen
 
-# Print out the vector representing the actors
+# Geben Sie den Vektor, der die Schauspieler repräsentiert, aus
 
 
-# Print the second element of the vector representing the actors
+# Geben Sie das zweite Element des Vektors, der die Schauspieler repräsentiert, aus
 
 ```
 
 *** =solution
 ```{r}
-# shining_list is already pre-loaded in the workspace
+# shining_list ist bereits in Ihrem Arbeitsbereich geladen
 
-# Print out the vector representing the actors
+# Geben Sie den Vektor, der die Schauspieler repräsentiert, aus
 shining_list$actors
 
-# Print the second element of the vector representing the actors
+# Geben Sie das zweite Element des Vektors, der die Schauspieler repräsentiert, aus
 shining_list$actors[2]
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not remove or change the definition of `shining_list`, which is pre-loaded in the workspace!"
+msg <- "Entfernen oder ändern Sie nicht die Definition von `shining_list`, sie ist bereits in Ihrem Arbeitsbereich geladen!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("shining_list$actors", incorrect_msg = "Have you correctly selected and printed out the vector representing actors? You can use `shining_list$actors`, for example.")
-test_output_contains("shining_list$actors[2]", incorrect_msg = "To select the second actor from the vector representing actors, you should chain your selections: `shining_list$actors` represents the actors, so you can add a `[2]` to select the second element.")
-success_msg("Great! Selecting elements from lists is rather easy isn't it? Continue to the next exercise.")
+test_output_contains("shining_list$actors", incorrect_msg = "Haben Sie den Vektor, der die Schauspieler respräsentiert, ausgewählt und ausgegeben? Verwenden Sie zum Beispiel `shining_list$actors`.")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "Um den zweiten Schauspieler von dem Vektor, der die Schauspieler respräsentiert, sollten Sie Ihre Auswahl verketten: `shining_list$actors` respräsentiert die Schauspieler. Sie können `[2]` hinzufügen, um das zweite Element auszuwählen.")
+success_msg("Sehr gut! Das Auswählen von Elementen von einer Liste ist ziemlich einfach, nicht wahr? Bitte machen Sie mit der nächsten Übung weiter.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:ca3f7b71504ff93940cf65889d406a58c5b0019c
-## Adding more movie information to the list
+## Das Hinzufügen weiter Filminformationen in die Liste
 
-Being proud of your first list, you shared it with the members of your movie hobby club. However, one of the senior members, a guy named M. McDowell, noted that you forgot to add the release year. Given your ambitions to become next year's president of the club, you decide to add this information to the list. 
+Sie können stolz auf Ihre erste Liste sein, Sie teilten es bereits mit den Mitgliedern Ihres Filmhobbyclubs. Jedoch bemerkte einer der älteren Mitgliedern, ein Typ namens M. McDowell, dass Sie vergessen haben, das Freigabejahr hinzuzufügen. Angesichts Ihrer Ambitionen im nächsten Jahr Präsident des Clubs zu werden, entscheiden Sie, diese Informationen zu der Liste hinzuzufügen.
 
-To conveniently add elements to lists you can use the [`c()`](http://www.rdocumentation.org/packages/base/functions/c) function, that you also used to build vectors:
+Um Elemente der Liste hinzuzufügen, können Sie die Funktion [`c()`](http://www.rdocumentation.org/packages/base/functions/c) verwenden, die auch bei Vektoren verwenden wird:
 
 ```
 ext_list <- c(my_list , my_val)
 ``` 
 
-This will simply extend the original list, `my_list`, with the component `my_val`. This component gets appended to the end of the list.
-If you want to give the new list item a name, you just add the name as you did before: 
+Dieser Befehl erweitert einfach die Originalliste, `my_list` mit der Komponente `my_val`. Diese Komponente wird an das Ende der Liste angehängt. Wenn Sie dem neuen Listeneintrag einen Namen geben wolen, fügen Sie einfach den Namen wie zuvor ein:
 
 ```
 ext_list <- c(my_list, my_name = my_val)
 ```
 
 *** =instructions
-- Complete the code below such that an item named `year` is added to the `shining_list` with the value 1980. Assign the result to `shining_list_full`.
-- Finally, have a look at the structure of `shining_list_full` with the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) function.
+- Füllen Sie den Code unten aus, so dass ein Element mit dem Namen `year` der `shining_list` mit dem Wert 1980 hinzugefügt wird. Weisen Sie den Wert `shining_list_full` zu.
+- Werfen Sie einen Blick auf die Struktur von `shining_list_full` mit der Funktion [`str()`](http://www.rdocumentation.org/packages/utils/functions/str).
 
 *** =hint
-Have a look at the example code in the exercise assignment. Maybe this can help you start:
+Werfen Sie einen Blick auf den Beispielcode in der Übungsaufgabe. Vielleicht kann das Beispiel Ihnen helfen, zu starten:
 ```
 shining_list <- c(shining_list, ...)
 ```
-You still have to add some code where the three dots are.
+Sie müssen noch einige Codes hinzufügen, da wo die drei Punkte sind.
 
 *** =pre_exercise_code
 ```{r, eval = FALSE}
@@ -389,36 +390,36 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_
 *** =sample_code
 
 ```{r}
-# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+# shining_list, die Liste mit den Filmnamen, Schauspielern und Bewertungen ist bereits in Ihrem Arbeitsbereich geladen
 
-# We forgot something; add the year to shining_list
+# Wir haben etwas vergessen; fügen Sie year der shining_list hinzu
 shining_list_full <- 
 
-# Have a look at shining_list_full
+# Werfen Sie einen Blick auf shining_list_full
 
 ```
 
 *** =solution
 
 ```{r}
-# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+# shining_list, die Liste mit den Filmnamen, Schauspielern und Bewertungen ist bereits in Ihrem Arbeitsbereich geladen
 
-# Use c() to add a year to shining_list
+# Verwenden Sie c(), um year der shining_list hinzuzufügen
 shining_list_full <- c(shining_list, year = 1980)
 
-# Have a look at shining_list_full
+# Werfen Sie einen Blick auf shining_list_full
 str(shining_list_full)
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove or change the definition of `shining_list`, which is pre-loaded in the workspace!"
+msg = "Entfernen oder ändern Sie nicht die Definition von `shining_list`, die bereits in Ihrem Arbeitsbereich geladen ist!"
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
 test_object("shining_list_full", eq_condition = "equal",
-            incorrect_msg = paste("Have you correctly extended `shining_list` with an element named `year`,",
-                                  "whose value is 1980? You can use `c(shining_list, year = 1980)`"))
-test_function("str", "object", incorrect_msg = "Don't forget to display the structure of `shining_list_full` with `str()`.")
-success_msg("Great! This was the last exercise on R lists! You now have a solid basis in the R programming language, but there's so much more to learn. Check out all the other DataCamp courses and become a true data science expert!")
+            incorrect_msg = paste("Haben Sie `shining_list` mit den Element `year` erweitert,",
+                                  "dessen Wert 1980 ist? Sie können `c(shining_list, year = 1980)` verwenden."))
+test_function("str", "object", incorrect_msg = "Vergessen Sie nicht mit der Funktion `str()` die Struktur von `shining_list_full` anzuzeigen.")
+success_msg("Sehr gut! Das war die letzte Übung in R Listen! Jetzt haben Sie eine solide Bais in der R Programmiersprache, aber es gibt noch viel mehr zu erfahren. Sehen Sie sich alle anderen DataCamps Kurse an und werden Sie ein wahrer Data Science Experte!")
 ```
 
 
