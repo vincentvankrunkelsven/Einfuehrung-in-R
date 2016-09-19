@@ -2,7 +2,7 @@
 title_meta  : Kapitel 4
 title       : Faktoren
 description : Sehr oft fallen Daten in eine begrenzte Anzahl von Kategorien. Zum Beispiel sind Menschen entweder männlich oder weiblich. In R werden kategoriale Daten in Faktoren gespeichert. 
-In Anbetracht der Bedeutung dieser Faktoren bei der Datenanalyse, sollten Sie anfangen zu lernen, wie sie erstellt, unterteilt und verglichen werden.
+In Anbetracht der großen Bedeutung dieser Faktoren bei der Datenanalyse, sollten Sie anfangen zu lernen, wie sie erstellt, unterteilt und verglichen werden.
 
 --- type:NormalExercise xp:100 skills:1 key:05273321916d99bb9c0deadf75c6834d25a47244
 ## Was ist ein Faktor und warum sollen Sie ihn verwenden?
@@ -11,9 +11,9 @@ In diesem Kapitel tauchen Sie in die wundervolle Welt der **Faktoren** ein.
 
 Der Begriff Faktor bezieht sich auf einen statistischen Datentyp, der verwendet wird, um kategoriale Variablen zu speichern. Der Unterschied zwischen kategorialen Variablen und einer fortlaufenden Variable ist, dass eine kategoriale Variable nur einer **begrenzten Anzahl von Kategorien** annehmen kann. Andererseits kann eine fortlaufende Variable einer unendlichen Anzahl von Werten entsprechen.
 
-Es ist wichtig, dass R weiß, ob sie mit einer fortlaufenden oder kategorialen Variable zu tun hat, wie die statistischen Modelle, die Sie zukünftig bei beiden Typen unterschiedlich entwickeln werden. (Sie sehen später, warum dies der Fall ist.)
+Es ist wichtig, dass R weiß, ob sie mit einer fortlaufenden oder kategorialen Variable zu tun haben, da abhängig vom jeweiligen Typ unterschiedliche statistische Modelle erzeugt werden müssen. (Sie werden später sehen, warum dies der Fall ist.)
 
-Ein gutes Beispiel für kategoriale Variablen ist die Variable 'Geschlecht'. Ein menschliches Individuum kann entweder "männlich" oder "weiblich" sein. So sind hier "männlich" und "weiblich", im vereinfachten Sinn, die beiden Werte der kategorialen Variable "Geschlecht" und jede Beobachtung kann entweder den Wert "männlich" oder "weiblich" zugewiesen werden.
+Ein gutes Beispiel für kategoriale Variablen ist die Variable 'Geschlecht'. Ein menschliches Individuum kann entweder "männlich" oder "weiblich" sein. So sind hier "männlich" und "weiblich", im vereinfachten Sinn, die beiden Werte der kategorialen Variable "Geschlecht" und jede Beobachtung kann entweder dem Wert "männlich" oder "weiblich" zugewiesen werden.
 
 *** =instructions
 Weisen Sie der Variable `theory` den Wert `"factors for categorical variables"` zu.
@@ -39,7 +39,7 @@ theory <- "factors for categorical variables"
 
 *** =sct
 ```{r}
-test_object("theory", incorrect_msg = "Stellen Sie sicher, dass Sie die Zeichenfolge `\"factors for categorical variables\"` der `theory` zugewiesen haben. Denken Sie in R an die Groß- und Kleinschreibung.");
+test_object("theory", incorrect_msg = "Stellen Sie sicher, dass Sie die Zeichenfolge `\"factors for categorical variables\"` der `theory` zugewiesen haben. Denken Sie bei der Arbeit mit R an die Groß- und Kleinschreibung.");
 success_msg("Gute Arbeit! Sind Sie bereit? Machen Sie bitte mit der nächsten Übung weiter!")
 ```
 
@@ -53,7 +53,7 @@ Um Faktoren in R zu erstellen, verwenden Sie die Funktion [`factor()`](http://ww
 gender_vector <- c("Male","Female","Female","Male","Male")
 ```
 
-Es ist klar, dass es zwei Kategorien gibt oder in R-Sprache **'Faktor Levels'**, bei der Aufgabe hier: "männlich" und "weiblich".
+Es ist klar, dass es zwei Kategorien gibt oder in der R-Sprache ausgedrückt **'Faktor Levels'**, bei dieser Aufgabe: "männlich" und "weiblich".
 
 Die Funktion [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) wird den Vektor als einen Faktor kodieren:
 
@@ -111,15 +111,15 @@ success_msg("Sehr gut! Wenn Sie mehr über die Funktion `factor()` herausfinden 
 
 Es gibt zwei Arten von kategorialen Variablen: eine **nominalskalierte Variable** und eine **ordinalskalierte Variable**.
 
-Eine nominale Variable ist eine kategoriale Variable ohne eine implizite Ordnung. Dies bedeutet, dass es unmöglich ist zu sagen, dass 'eine Variable mehr wert als die andere Variable hat'. Zum Beispiel: Denken Sie an die kategoriale Variable `animals_vector` mit den Kategorien`"Elephant"`, `"Giraffe"`, `"Donkey"` und `"Horse"`. Hier ist es unmöglich zu sagen, dass ein Tier über oder unter dem anderen Tier steht. (Beachten Sie, dass einige von Ihnen vielleicht nicht zustimmen werden ;-) ).
+Eine nominale Variable ist eine kategoriale Variable ohne eine implizite Ordnung. Dies bedeutet, dass es unmöglich ist zu sagen, dass 'eine Variable mehr Wert als die andere Variable hat'. Ein Beispiel: Denken Sie an die kategoriale Variable `animals_vector` mit den Kategorien`"Elephant"`, `"Giraffe"`, `"Donkey"` und `"Horse"`. Hier ist es unmöglich zu sagen, dass ein Tier über oder unter dem anderen Tier steht. (Beachten Sie, dass einige von Ihnen vielleicht nicht zustimmen werden ;-) ).
 
 Im Gegensatz dazu, haben die ordinalen Variablen eine natürliche Ordnung. Betrachten wir, zum Beispiel, die kategorialen Variablen `temperature_vector` mit den Kategorien: `"Low"`, `"Medium"` und `"High"`. Hier ist es offensichtlich, dass `"Medium"` über `"Low"` steht und `"High"` über `"Medium"`.
 
 *** =instructions
-Klicken Sie auf 'Antwort abschicken', um zu überprüfen, wie R nominale und ordinale Variablen konstruiert und ausgibt. Keine Sorge, wenn Sie noch nicht den gesamten Code verstehen, wir kommen später dazu.
+Klicken Sie auf 'Antwort abschicken', um zu überprüfen, wie R nominale und ordinale Variablen konstruiert und ausgibt. Keine Sorge, wenn Sie noch nicht den gesamten Code verstehen-, wir kommen später dazu.
 
 *** =hint
-Klicken Sie einfach auf den Knopf 'Antwort abschicken' und werfen Sie einen Blick auf die Konsole. Beachten Sie, wie R die Reihenfolge der Faktor Levels für die ordinalskalierte Variablen anzeigt.
+Klicken Sie einfach auf den Knopf 'Antwort abschicken' und werfen Sie einen Blick auf die Konsole. Beachten Sie, wie R die Reihenfolge der Faktor Levels für die ordinalskalierten Variablen anzeigt.
 
 *** =pre_exercise_code
 ```{r}
@@ -154,7 +154,7 @@ factor_temperature_vector
 
 *** =sct
 ```{r}
-msg <- "Ändern Sie nicht das Beispielcode. Drücken Sie einfach den Antwort abschicken - Button und inspizieren Sie die Lösung!"
+msg <- "Ändern Sie nicht den Beispielcode. Drücken Sie einfach den Button 'Antwort abschicken' und inspizieren Sie die Lösung!"
 test_object("animals_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("temperature_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_animals_vector", undefined_msg = msg, incorrect_msg = msg)
@@ -168,19 +168,19 @@ success_msg("Können Sie sagen, was in dieser Übung passiert ist? Ausgezeichnet
 --- type:NormalExercise xp:100 skills:1 key:1aa698978d32d1a0befa4700d7da85a648e1d69e
 ## Faktor Levels
 
-Wenn Sie zuerst einen Datensatz bekommen, werden Sie oft bemerken, dass die Faktoren bestimmte Faktor Levels enthalten. Manchmal wollen Sie die Namen dieser Levels für Klarheit oder aus anderen Gründen ändern. R erlaubt Ihnen dies mit der Funktion [`levels()`](http://www.rdocumentation.org/packages/base/functions/levels) zu tun:
+Wenn Sie einen Datensatz bekommen, werden Sie oft bemerken, dass die Faktoren bestimmte Faktor Levels enthalten. Manchmal möchten Sie die Namen dieser Levels aus Gründen der Verständlichkeit oder aus anderen Gründen ändern. R erlaubt Ihnen dies mit der Funktion [`levels()`](http://www.rdocumentation.org/packages/base/functions/levels):
 
 ```
 levels(factor_vector) <- c("name1", "name2",...)
 ```
 
-Eine gute Illustration sind die Rohdaten, die durch eine Umfrage zur Verfügung gestellt wurden. Eine Standardfrage für jeden Fragebogen ist das Geschlecht der Befragten. Sie erinnern sich daran, dass in der vorherigen Frage dies ein Faktor ist und wenn Sie den Fragebogen auf der Straße ausführen, werden die Levels oftmals mit `"M"` und `"F"` verschlüsselt.
+Eine gute Illustration sind die Rohdaten, die durch eine Umfrage zur Verfügung gestellt wurden. Eine Standardfrage für jeden Fragebogen ist das Geschlecht der Befragten. Sie erinnern sich daran, dass dies in der vorherigen Frage ein Faktor war und wenn Sie den Fragebogen auf der Straße einsetzen, werden die Levels oftmals mit `"M"` und `"F"` verschlüsselt.
 
 ```
 survey_vector <- c("M", "F", "F", "M", "M")
 ```
 
-Als nächstes, wenn Sie Ihre Datenanalyse starten wollen, ist Ihr Hauptanliegen einen schönen Überblick über alle Variablen zu haben und was sie bedeuten. An diesem Punkt werden Sie oft die Faktor Levels zu `"Male"` und `"Female"` ändern wollen, statt `"M"` und `"F"`, um Ihr Leben leichter zu machen.
+Als nächstes, wenn Sie die Datenanalyse starten wollen, ist Ihr Hauptanliegen einen schönen Überblick über alle Variablen und ihre Bedeutng zu erhalten. An diesem Punkt werden Sie oft die Faktor Levels zu `"Male"` und `"Female"` ändern wollen, um sich die Arbeit zu erleichertn.
 
 **Achtung:** die Reihenfolge, mit der Sie die Levels zuordnen, ist wichtig. Wenn Sie `levels(factor_survey_vector)` eingeben, werden Sie sehen, dass R `[1] "F" "M"` ausgibt. Wenn Sie die Faktor Levels bei der Erstellung eines Vektors nicht angeben, weist R sie automatisch und alphabetisch zu.  Um richtig `"F"` `"Female"` und `"M"` `"Male"` zuzuweisen, sollten Sie die Levels in dieser Reihenfolge `c("Female", "Male")` eingeben.
 
@@ -189,7 +189,7 @@ Als nächstes, wenn Sie Ihre Datenanalyse starten wollen, ist Ihr Hauptanliegen 
 - Ändern Sie die Faktor Levels von `factor_survey_vector` zu `c("Female", "Male")`. Achten Sie hier auf die Reihenfolge der Vektorelemente.
 
 *** =hint
-Achten Sie auf die Reihenfolge, in der Sie die Faktor Levels eingeben müssen. Hinweis: Blick auf die Reihenfolge in der die Werte ausgegeben werden sollen, wenn Sie `levels(factor_survey_vector)` eingeben.
+Achten Sie auf die Reihenfolge, in der Sie die Faktor Levels eingeben müssen. Hinweis: Beachten Sie die Reihenfolge in der die Werte ausgegeben werden sollen, wenn Sie `levels(factor_survey_vector)` eingeben.
 
 *** =pre_exercise_code
 ```{r}
@@ -237,19 +237,19 @@ success_msg("Wunderbar! Machen Sie bitte mit der nächsten Übung weiter.")
 --- type:NormalExercise xp:100 skills:1 key:a549f13c0644ccc89cd39a10aa48706754637ed0
 ## Zusammenfassen eines Vektors
 
-Nach dem Beenden dieses Kurses wird dies einer Ihrer Lieblingsfunktionen in R sein [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). Diese Funktion gibt Ihnen einen schnellen Überblick über den Inhalt einer Variable:
+Nach dem Beenden dieses Kurses wird diese eine Ihrer Lieblingsfunktionen in R sein [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). Diese Funktion gibt Ihnen einen schnellen Überblick über den Inhalt einer Variable:
 
 ```
 summary(my_var)
 ```
 
-Zurück zu unserer Umfrage. Möchten Sie gerne wissen, wie viele `"Male"` und `"Female"` in Ihrer Studie mitgemacht haben. Die Funktion [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) gibt Ihnen die Antwort auf diese Frage.
+Zurück zu unserer Umfrage. Möchten Sie gerne wissen, wie viele `"Male"` und `"Female"` in Ihrer Studie mitgemacht haben? Die Funktion [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) gibt Ihnen die Antwort auf diese Frage.
 
 *** =instructions
 Verwenden Sie [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) für `survey_vector` und `factor_survey_vector`. Interpretieren Sie die Ergebnisse beider Vektoren. Sind beide in diesem Fall gleichermaßen sinnvoll? 
 
 *** =hint
-Rufen Sie die Funktion [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary)für beide Vektoren `survey_vector` und `factor_survey_vector` auf, so einfach ist das!
+Rufen Sie die Funktion [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary)für die beiden Vektoren `survey_vector` und `factor_survey_vector` auf. Sie sehen, es ist ganz einfach!
 
 *** =pre_exercise_code
 ```{r}
@@ -273,7 +273,7 @@ factor_survey_vector
 
 *** =solution
 ```{r}
-# Bauen Sie factor_survey_vector mit klaren Levels
+# Erstellen Sie factor_survey_vector mit klaren Levels
 survey_vector <- c("M", "F", "F", "M", "M")
 factor_survey_vector <- factor(survey_vector)
 levels(factor_survey_vector) <- c("Female", "Male")
@@ -301,13 +301,13 @@ success_msg("Super! Werfen Sie einen Blick auf die Ausgabe. Die Tatsache, dass S
 --- type:NormalExercise xp:100 skills:1 key:90ecc160d1ebf2f75bf53f9c3843fc1632bdd0a5
 ## Kampf der Geschlechter
 
-In `factor_survey_vector` haben wir einen Faktor mit zwei Levels: männlich und weiblich. Aber wie schätzt R diese relativ zueinander ein? In anderen Worten, was denkt R, wer besser ist, männlich oder weiblich?
+In `factor_survey_vector` haben wir einen Faktor mit zwei Levels: männlich und weiblich. Aber wie schätzt R diese relativ zueinander ein? In anderen Worten: Was denkt R, wer besser ist, männlich oder weiblich?
 
 *** =instructions
 Lesen Sie den Code im Editor und klicken Sie auf 'Antwort abschicken', um zu sehen, ob Männer mehr wert sind als Frauen.
 
 *** =hint
-Klicken Sie einfach auf 'Antwort abschicken' und werfen Sie einen Blick auf die Ausgabe, die in der Konsole ausgegeben wird.
+Klicken Sie einfach auf 'Antwort abschicken' und werfen Sie einen Blick auf die Ausgabe in der Konsole.
 
 *** =pre_exercise_code
 ```{r}
@@ -356,18 +356,18 @@ test_object("factor_survey_vector", eq_condition = "equal", undefined_msg = msg,
 test_object("male", undefined_msg = msg, incorrect_msg = msg)
 test_object("female", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("male > female", incorrect_msg = msg)
-success_msg("Puh, es scheint so, dass R geschlechtsneutral ist. Oder vielleicht will R sich gerade aus diesen Diskussionen raushalten ;-).")
+success_msg("Puh, es scheint so, dass R geschlechtsneutral ist. Oder vielleicht ist R intelligent genug um sich aus diesen Diskussionen rauszuhalten ;-).")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:9ab0928916bf84ab225713a9a1ce40d9e322c6a0
 ## Geordnete Faktoren
 
-Da `"männlich"` und `"weiblich"` ungeordnete (oder nominale) Faktor Levels sind, gibt R eine Warnmeldung, die besagt, dass der größer als Operator nicht sinnvoll ist. Wie schon einmal gesehen, verbindet R die gleichen Werte mit den Levels für solche Faktoren. 
+Da `"männlich"` und `"weiblich"` ungeordnete (oder nominale) Faktor Levels sind, gibt R eine Warnmeldung, die besagt, dass der 'größer als' Operator nicht sinnvoll ist. Wie schon einmal gesehen, verbindet R die gleichen Werte mit den Levels für solche Faktoren. 
 
 Aber dies ist nicht immer der Fall! Manchmal werden Sie sich auch mit Faktoren befassen, die eine natürliche Ordnung zwischen den Kategorien haben. Wenn dies der Fall ist, müssen wir sicherstellen, dass wir diese Informationen an R weitergeben... 
 
-Lassen Sie uns sagen, dass Sie ein Forschungsteam mit fünf Datenanalysten leiten und dass Sie ihre Leistung bewerten wollen. Um das zu tun, werden Sie ihre Geschwindigkeit verfolgen, jeden Analysten als `"langsam"`, `"schnell"` oder `"verrückt"` bewerten und die Ergebnisse in `speed_vector` speichern.
+Lassen Sie uns sagen, dass Sie ein Forschungsteam mit fünf Datenanalysten leiten und deren Leistung bewerten wollen. Um dies zu tun, werden Sie die Arbeitsgeschwindigkeit beobachten, jeden Analysten als `"langsam"`, `"schnell"` oder `"verrückt"` bewerten und die Ergebnisse in `speed_vector` speichern.
 
 *** =instructions
 Als ersten Schritt ordnen Sie dem `speed_vector` folgende Informationen zu:
@@ -460,7 +460,7 @@ summary(factor_speed_vector)
 
 *** =sct
 ```{r}
-msg = "Ändern Sie nichts am Befehl, der die `speed_vector` Variablen gibt."
+msg = "Ändern Sie nichts am Befehl, der die `speed_vector` Variablen ergibt."
 test_object("speed_vector", undefined_msg = msg, incorrect_msg = msg)
 test_function("factor", "x", incorrect_msg = "Das erste Argument, dass in der Funktion `factor()` sein sollte, ist `speed_vector`.")
 test_function("factor", "ordered", incorrect_msg = "Stellen Sie sicher, `ordered = TRUE` in der Funktion `factor()` zu setzen.")
@@ -481,7 +481,7 @@ Die Tatsache, dass `factor_speed_vector` jetzt geornedt ist, ermöglicht uns, ve
 *** =instructions
 - Verwenden Sie `[2]`, um den Faktorwert vom zweiten Datenanalysten aus `factor_speed_vector` zu wählen. Speichern Sie ihn als `da2`.
 - Verwenden Sie `[5]`, um den Faktorwert vom fünften Datenanalysten aus `factor_speed_vector` zu wählen. Speichern Sie ihn als `da5`.
-- Prüfen Sie, ob `da2` größer als `da5` ist; geben Sie einfach das Ergebnis aus. Denken Sie daran, dass Sie den Operator `>` verwenden können. So können Sie prüfen, ob ein Element größer als das andere ist.
+- Prüfen Sie, ob `da2` größer ist als `da5` und geben Sie das Ergebnis aus. Denken Sie daran, dass Sie den Operator `>` verwenden können. So können Sie prüfen, ob ein Element größer als das andere ist.
 
 *** =hint
 - Um den Faktorwert für den dritten Datenanalysten zu wählen, verwenden Sie `factor_speed_vector[3]`.
@@ -535,7 +535,7 @@ test_object("da2", eq_condition = "equal", incorrect_msg = sprintf(msg, "second"
 test_object("da5", eq_condition = "equal", incorrect_msg = sprintf(msg, "fifth", "5"))
 test_output_contains("da2 > da5", incorrect_msg = "Haben Sie `da2` und `da5` richtig verglichen? Sie können `>` verwenden. Geben Sie einfach das Ergebnis aus.")
 
-success_msg("Bellissimo! Was bedeutet das Ergebnis? Der Datenanalyst zwei beschwert sich über den Datenanylsten fünf, während er oder sie in der Tat der/die Eine ist, der/die alles verlangsamt! Diese letzte Übung schließt das Kapitel über die Faktoren. Mit einer soliden Basis in Vektoren, Matrizen und Faktoren, sind Sie bereit, in die wunderbare Welt der Datenframes einzutauchen, die eine sehr wichtige Datenstruktur in R ist!")
+success_msg("Bellissimo! Was bedeutet das Ergebnis? Datenanalyst 2 beschwert sich über Datenanylst 5,  allerdings ist in Wirklichkeit Analyst 2 selbst der der alles verlangsamt! Diese letzte Übung beschließt das Kapitel über die Faktoren. Mit einer soliden Wissensbasis in den Bereichen Vektoren, Matrizen und Faktoren, sind Sie bereit, in die wunderbare Welt der Dataframes einzutauchen, die eine sehr wichtige Datenstruktur in R darstellen!")
 ```
 
 
