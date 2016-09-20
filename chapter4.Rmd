@@ -1,8 +1,8 @@
 ---
 title_meta  : Kapitel 4
 title       : Faktoren
-description : Sehr oft fallen Daten in eine begrenzte Anzahl von Kategorien. Zum Beispiel sind Menschen entweder maennlich oder weiblich. In R werden kategoriale Daten in Faktoren gespeichert. 
-In Anbetracht der grossen Bedeutung dieser Faktoren bei der Datenanalyse, sollten Sie anfangen zu lernen, wie sie erstellt, unterteilt und verglichen werden.
+description : "Sehr oft fallen Daten in eine begrenzte Anzahl von Kategorien. Zum Beispiel sind Menschen entweder männlich oder weiblich. In R werden kategoriale Daten in Faktoren gespeichert. 
+In Anbetracht der großen Bedeutung dieser Faktoren bei der Datenanalyse, sollten Sie anfangen zu lernen, wie sie erstellt, unterteilt und verglichen werden."
 
 --- type:NormalExercise xp:100 skills:1 key:05273321916d99bb9c0deadf75c6834d25a47244
 ## Was ist ein Faktor und warum sollen Sie ihn verwenden?
