@@ -1,4 +1,3 @@
-id: 58
 title: Einführung in R
 instructors:
  - martin.schneider@eoda.de
@@ -10,11 +9,3 @@ description: "In dieser Einführung in R werden Sie die Grundlagen der wunderbar
   weltweit hat sich R schnell zur führenden Programmiersprache in Statistik und in Datascience entwickelt.
   Jedes Jahr steigt die Anzahl an R-Anwendern um 40% und eine wachsende Zahl von Organisationen nutzen es in ihren 
   täglichen Tätigkeiten. Nutzen Sie heute die Leistung von R durch diesen kostenlosen Online-Kurs!" 
-chapters:
-  chapter1.Rmd: 316
-  chapter2.Rmd: 317
-  chapter3.Rmd: 318
-  chapter4.Rmd: 319
-  chapter5.Rmd: 320
-  chapter6.Rmd: 321
-
